@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Wetterbericht abrufen</title>
+
+  <style>
+    body{
+      text-align: center;
+      background-color: #be5252;
+    }
+    #lyrics{
+      display: none;
+      border: solid;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      padding: 20px;
+      color: white;
+      background-color: #c27979;
+    }
+    label{
+      font-size: 50px;
+    }
+    #value{
+      width: 400px;
+      height: 30px;
+      text-align: center;
+    }
+    .hidden{
+      display: none;
+      text-align: center;
+      justify-content: center;
+      align-content: center;
+    }
+    .container {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center;     /* Center vertically */
+    }
+  </style>
+  <script src='fetching.js'></script>
+  <link rel='stylesheet' href='stylesheet.css'>
+
+</head>
+<body>
+<form id='form' >
+  <label >WELCOME TO THE BIG SONG FINDER</label><br><br>
+  <input id='value' type=text required><br><br>
+  <input id='submit' type='submit'>
+</form>
+<div class='container'>
+<img class='hidden' id='loading' src='Duck.gif' height='480' width='383'/>
+</div>
+<h1 id='error'></h1>
+<h1 id='author'></h1>
+<img id='thumbnail'>
+<p id='lyrics'></p>
+</body>
+</html>
